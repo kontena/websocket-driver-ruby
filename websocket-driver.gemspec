@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
-  s.name              = 'websocket-driver'
+  s.name              = 'websocket-driver-kontena'
   s.version           = '0.6.5'
-  s.summary           = 'WebSocket protocol handler with pluggable I/O'
+  s.summary           = 'WebSocket protocol handler with pluggable I/O (without native c-extension)'
   s.author            = 'James Coglan'
   s.email             = 'jcoglan@gmail.com'
   s.homepage          = 'http://github.com/faye/websocket-driver-ruby'
@@ -18,8 +18,6 @@ Gem::Specification.new do |s|
   if RUBY_PLATFORM =~ /java/
     s.platform = 'java'
     files << 'lib/websocket_mask.jar'
-  else
-    s.extensions << 'ext/websocket-driver/extconf.rb'
   end
 
   s.files = files
